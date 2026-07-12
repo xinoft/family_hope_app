@@ -1,7 +1,8 @@
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
-import 'package:video_thumbnail/video_thumbnail.dart';
+import 'package:get_thumbnail_video/index.dart';
+import 'package:get_thumbnail_video/video_thumbnail.dart';
 
 import '../../../../core/theme/app_spacing.dart';
 import '../../models/gallery_item.dart';
@@ -217,7 +218,6 @@ class _VideoThumbnailState extends State<_VideoThumbnail> {
         maxWidth: 300,
         quality: 60,
       );
-      if (data == null) return;
       _VideoThumbnailCache.put(widget.url, data);
       if (mounted) setState(() => _bytes = data);
     } catch (_) {
