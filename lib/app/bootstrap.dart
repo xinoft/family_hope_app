@@ -8,6 +8,8 @@ import '../core/network/api_client.dart';
 import '../core/storage/secure_storage_service.dart';
 import '../features/auth/data/user_repository.dart';
 import '../features/auth/providers/session_provider.dart';
+import '../features/finance/data/finance_repository.dart';
+import '../features/gallery/data/gallery_repository.dart';
 import '../features/student_context/data/student_repository.dart';
 import '../features/student_context/providers/student_context_provider.dart';
 
@@ -33,6 +35,12 @@ void bootstrap() {
   );
   getIt.registerLazySingleton<UserRepository>(
     () => UserRepository(getIt<ApiClient>()),
+  );
+  getIt.registerLazySingleton<GalleryRepository>(
+    () => GalleryRepository(getIt<ApiClient>()),
+  );
+  getIt.registerLazySingleton<FinanceRepository>(
+    () => FinanceRepository(getIt<ApiClient>()),
   );
 
   _syncSessionWithRealData();

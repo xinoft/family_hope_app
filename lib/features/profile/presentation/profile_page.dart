@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../../../core/constants/user_type.dart';
 import '../../../core/theme/app_gradients.dart';
 import '../../../core/theme/app_spacing.dart';
+import '../../../core/utils/date_formatting.dart';
 import '../../auth/providers/session_provider.dart';
 import '../../student_context/providers/student_context_provider.dart';
 
@@ -149,7 +150,7 @@ class ProfilePage extends StatelessWidget {
                               icon: Icons.cake_outlined,
                               label: 'Date of Birth',
                               value: activeStudent?.dateOfBirth != null
-                                  ? _formatDate(activeStudent!.dateOfBirth!)
+                                  ? formatShortDate(activeStudent!.dateOfBirth!)
                                   : '-',
                             ),
                           ],
@@ -199,9 +200,6 @@ class ProfilePage extends StatelessWidget {
       ),
     );
   }
-
-  String _formatDate(DateTime date) =>
-      '${date.day.toString().padLeft(2, '0')}/${date.month.toString().padLeft(2, '0')}/${date.year}';
 }
 
 class _ProfileRow extends StatelessWidget {

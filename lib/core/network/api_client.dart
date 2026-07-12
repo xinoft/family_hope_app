@@ -53,6 +53,18 @@ class ApiClient {
   /// reports `Success: false`.
   Future<dynamic> getResult(String path, {Map<String, dynamic>? queryParameters}) async {
     final response = await dio.get(path, queryParameters: queryParameters);
+    return _unwrap(path, response);
+  }
+
+  /// Same as [getResult], but POSTs a JSON [data] body - for the
+  /// endpoints that take their filters/payload in the body rather than
+  /// query parameters (e.g. `Finance/GetPaymentTracking`, `Finance/PayFees`).
+  Future<dynamic> postResult(String path, {Object? data}) async {
+    final response = await dio.post(path, data: data);
+    return _unwrap(path, response);
+  }
+
+  dynamic _unwrap(String path, Response response) {
     final envelope = _decodeJsonMap(response.data);
     if (envelope['Success'] != true) {
       throw ApiException(envelope['ErrorMessage'] as String? ?? 'Request to $path failed');

@@ -21,15 +21,16 @@ class _ModuleTile {
   const _ModuleTile(this.module, this.label, this.icon, this.route);
 }
 
+// Circulars is hidden from the grid - not implemented on the backend yet.
+// Attendance is hidden for now too, pending further work.
+// Both routes/pages still exist so re-enabling either is a one-line change.
 const _moduleTiles = [
-  _ModuleTile(AppModule.circulars, 'Circulars', Icons.campaign_outlined, AppRoutes.circulars),
-  _ModuleTile(AppModule.attendance, 'Attendance', Icons.event_available_outlined, AppRoutes.attendance),
   _ModuleTile(AppModule.timetable, 'Timetable', Icons.schedule_outlined, AppRoutes.timetable),
   _ModuleTile(AppModule.meetings, 'Meetings', Icons.groups_outlined, AppRoutes.meetings),
-  _ModuleTile(AppModule.goals, 'Goals', Icons.flag_outlined, AppRoutes.goals),
+  _ModuleTile(AppModule.gallery, 'Gallery', Icons.photo_library_outlined, AppRoutes.gallery),
   _ModuleTile(AppModule.reports, 'Reports', Icons.description_outlined, AppRoutes.reports),
   _ModuleTile(AppModule.finance, 'Finance', Icons.payments_outlined, AppRoutes.finance),
-  _ModuleTile(AppModule.gallery, 'Gallery', Icons.photo_library_outlined, AppRoutes.gallery),
+  _ModuleTile(AppModule.goals, 'Goals', Icons.flag_outlined, AppRoutes.goals),
   _ModuleTile(AppModule.approvals, 'Approvals', Icons.fact_check_outlined, AppRoutes.approvals),
   _ModuleTile(AppModule.chat, 'Chat', Icons.chat_bubble_outline, AppRoutes.chat),
 ];
