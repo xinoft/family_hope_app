@@ -10,6 +10,7 @@ import '../features/auth/data/user_repository.dart';
 import '../features/auth/providers/session_provider.dart';
 import '../features/finance/data/finance_repository.dart';
 import '../features/gallery/data/gallery_repository.dart';
+import '../features/reports/data/report_repository.dart';
 import '../features/student_context/data/student_repository.dart';
 import '../features/student_context/providers/student_context_provider.dart';
 
@@ -41,6 +42,9 @@ void bootstrap() {
   );
   getIt.registerLazySingleton<FinanceRepository>(
     () => FinanceRepository(getIt<ApiClient>()),
+  );
+  getIt.registerLazySingleton<ReportRepository>(
+    () => ReportRepository(getIt<ApiClient>()),
   );
 
   _syncSessionWithRealData();

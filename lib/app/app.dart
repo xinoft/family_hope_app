@@ -9,6 +9,7 @@ import '../core/theme/app_theme.dart';
 import '../features/auth/providers/session_provider.dart';
 import '../features/finance/data/finance_repository.dart';
 import '../features/gallery/data/gallery_repository.dart';
+import '../features/reports/data/report_repository.dart';
 import '../features/student_context/data/student_repository.dart';
 import '../features/student_context/providers/student_context_provider.dart';
 import 'router/app_router.dart';
@@ -35,6 +36,7 @@ class _FamilyHopeAppState extends State<FamilyHopeApp> {
         Provider.value(value: getIt<StudentRepository>()),
         Provider.value(value: getIt<GalleryRepository>()),
         Provider.value(value: getIt<FinanceRepository>()),
+        Provider.value(value: getIt<ReportRepository>()),
         // Exposes just the resolved Capabilities so core/ widgets (like
         // PermissionGate) can depend on that type without depending on
         // the features/auth layer.
