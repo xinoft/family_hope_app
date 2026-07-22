@@ -4,11 +4,11 @@ import 'package:provider/provider.dart';
 import '../../../core/constants/app_module.dart';
 import '../../../core/theme/app_spacing.dart';
 import '../../../core/utils/date_formatting.dart';
+import '../../../core/widgets/approval_action_bar.dart';
 import '../../../core/widgets/permission_gate.dart';
 import '../data/report_repository.dart';
 import '../models/approval_status.dart';
 import '../models/progress_report.dart';
-import 'widgets/approval_action_bar.dart';
 import 'widgets/approval_status_chip.dart';
 
 class ProgressReportDetailPage extends StatelessWidget {

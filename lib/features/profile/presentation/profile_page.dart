@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../../../core/constants/user_type.dart';
 import '../../../core/theme/app_gradients.dart';
 import '../../../core/theme/app_spacing.dart';
+import '../../../core/theme/theme_controller.dart';
 import '../../../core/utils/date_formatting.dart';
 import '../../auth/providers/session_provider.dart';
 import '../../student_context/providers/student_context_provider.dart';
@@ -154,6 +155,34 @@ class ProfilePage extends StatelessWidget {
                                   : '-',
                             ),
                           ],
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: AppSpacing.l),
+                  Card(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.m, vertical: AppSpacing.xs),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 36,
+                            height: 36,
+                            decoration: BoxDecoration(
+                              color: colorScheme.primary.withValues(alpha: 0.12),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            alignment: Alignment.center,
+                            child: Icon(Icons.dark_mode_outlined, color: colorScheme.primary, size: 18),
+                          ),
+                          const SizedBox(width: AppSpacing.m),
+                          Expanded(
+                            child: Text('Dark Mode', style: textTheme.bodyMedium),
+                          ),
+                          Switch(
+                            value: context.watch<ThemeController>().isDarkMode,
+                            onChanged: (enabled) => context.read<ThemeController>().toggleDarkMode(enabled),
+                          ),
                         ],
                       ),
                     ),

@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
 
-/// Approve/Reject row shown at the bottom of a report detail page for a
-/// pending report - shared by Incident and Progress reports so the
-/// confirmation flow (and its note prompt) looks and behaves identically.
+/// Approve/Reject (or Approve/Decline) row shown at the bottom of a
+/// detail page for something pending review - shared by Reports (staff
+/// approving a report) and Approvals (a parent responding to a request),
+/// so the confirmation flow and its note prompt look and behave
+/// identically everywhere approval happens.
 ///
-/// Note: this calls the real approval endpoint, but the backend derives
-/// "who is approving" from the caller's JWT identity - our dummy token
-/// can't provide that correctly yet, so this may be rejected server-side
-/// until real staff auth exists (see `ReportRepository`/`ReportsPage`).
+/// Note: where this calls a backend endpoint that derives "who is
+/// approving" from the caller's JWT identity, it may be rejected
+/// server-side until real signed-JWT auth exists - see the caller's own
+/// docs for whether that applies.
 class ApprovalActionBar extends StatefulWidget {
   final Future<void> Function({required bool approve, String? note}) onDecide;
+  final String itemNoun;
+  final String declineLabel;
 
-  const ApprovalActionBar({super.key, required this.onDecide});
+  const ApprovalActionBar({
+    super.key,
+    required this.onDecide,
+    this.itemNoun = 'report',
+    this.declineLabel = 'Reject',
+  });
 
   @override
   State<ApprovalActionBar> createState() => _ApprovalActionBarState();
@@ -45,7 +54,7 @@ class _ApprovalActionBarState extends State<ApprovalActionBar> {
       final confirmed = await showDialog<bool>(
         context: context,
         builder: (dialogContext) => AlertDialog(
-          title: Text(approve ? 'Approve report?' : 'Reject report?'),
+          title: Text(approve ? 'Approve ${widget.itemNoun}?' : '${widget.declineLabel} ${widget.itemNoun}?'),
           content: TextField(
             controller: controller,
             maxLines: 3,
@@ -63,7 +72,7 @@ class _ApprovalActionBarState extends State<ApprovalActionBar> {
                 minimumSize: const Size(64, 40),
               ),
               onPressed: () => Navigator.of(dialogContext).pop(true),
-              child: Text(approve ? 'Approve' : 'Reject'),
+              child: Text(approve ? 'Approve' : widget.declineLabel),
             ),
           ],
         ),
@@ -82,7 +91,7 @@ class _ApprovalActionBarState extends State<ApprovalActionBar> {
           child: OutlinedButton(
             onPressed: _isSubmitting ? null : () => _handle(false),
             style: OutlinedButton.styleFrom(foregroundColor: Theme.of(context).colorScheme.error),
-            child: const Text('Reject'),
+            child: Text(widget.declineLabel),
           ),
         ),
         const SizedBox(width: 12),

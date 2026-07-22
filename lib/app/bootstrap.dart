@@ -6,12 +6,18 @@ import '../core/constants/user_type.dart';
 import '../core/di/service_locator.dart';
 import '../core/network/api_client.dart';
 import '../core/storage/secure_storage_service.dart';
+import '../core/theme/theme_controller.dart';
+import '../features/approvals/data/approval_repository.dart';
 import '../features/auth/data/user_repository.dart';
 import '../features/auth/providers/session_provider.dart';
+import '../features/chat/data/chat_repository.dart';
 import '../features/finance/data/finance_repository.dart';
 import '../features/gallery/data/gallery_repository.dart';
+import '../features/goals/data/goals_repository.dart';
+import '../features/meetings/data/meetings_repository.dart';
 import '../features/reports/data/report_repository.dart';
 import '../features/student_context/data/student_repository.dart';
+import '../features/timetable/data/timetable_repository.dart';
 import '../features/student_context/providers/student_context_provider.dart';
 
 /// Composition root: the one place allowed to know about every feature's
@@ -46,9 +52,28 @@ void bootstrap() {
   getIt.registerLazySingleton<ReportRepository>(
     () => ReportRepository(getIt<ApiClient>()),
   );
+  getIt.registerLazySingleton<ApprovalRepository>(
+    () => ApprovalRepository(getIt<ApiClient>()),
+  );
+  getIt.registerLazySingleton<ThemeController>(
+    () => ThemeController(secureStorage: getIt<SecureStorageService>()),
+  );
+  getIt.registerLazySingleton<TimetableRepository>(
+    () => TimetableRepository(),
+  );
+  getIt.registerLazySingleton<MeetingsRepository>(
+    () => MeetingsRepository(),
+  );
+  getIt.registerLazySingleton<GoalsRepository>(
+    () => GoalsRepository(),
+  );
+  getIt.registerLazySingleton<ChatRepository>(
+    () => ChatRepository(),
+  );
 
   _syncSessionWithRealData();
   unawaited(getIt<SessionProvider>().restoreSession());
+  unawaited(getIt<ThemeController>().loadSaved());
 }
 
 /// Fetches real profile/student data from the API right after a login or

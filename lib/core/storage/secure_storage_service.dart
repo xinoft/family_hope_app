@@ -6,6 +6,7 @@ class SecureStorageService {
   static const _tokenKey = 'auth_token';
   static const _userTypeKey = 'user_type';
   static const _entityIdKey = 'entity_id';
+  static const _themeModeKey = 'theme_mode';
 
   final FlutterSecureStorage _storage;
 
@@ -29,6 +30,12 @@ class SecureStorageService {
       _storage.write(key: _entityIdKey, value: entityId);
 
   Future<String?> readEntityId() => _storage.read(key: _entityIdKey);
+
+  /// A device/UI preference, not session state - deliberately untouched
+  /// by [clear()] so logging out doesn't reset it.
+  Future<void> saveThemeMode(String mode) => _storage.write(key: _themeModeKey, value: mode);
+
+  Future<String?> readThemeMode() => _storage.read(key: _themeModeKey);
 
   Future<void> clear() async {
     await _storage.delete(key: _tokenKey);

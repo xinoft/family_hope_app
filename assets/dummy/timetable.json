@@ -1,0 +1,31 @@
+[
+  {"Id": 1, "WeekDay": 1, "DisplayOrder": 1, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "09:00", "EndTime": "09:45", "Title": "Speech Therapy"},
+  {"Id": 2, "WeekDay": 1, "DisplayOrder": 2, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "09:45", "EndTime": "10:30", "Title": "Occupational Therapy"},
+  {"Id": 3, "WeekDay": 1, "DisplayOrder": 3, "SlotType": 2, "SlotTypeName": "Break", "StartTime": "10:30", "EndTime": "10:45", "Title": null},
+  {"Id": 4, "WeekDay": 1, "DisplayOrder": 4, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "10:45", "EndTime": "11:30", "Title": "Life Skills"},
+  {"Id": 5, "WeekDay": 1, "DisplayOrder": 5, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "11:30", "EndTime": "12:15", "Title": "Sensory Play"},
+
+  {"Id": 6, "WeekDay": 2, "DisplayOrder": 1, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "09:00", "EndTime": "09:45", "Title": "Music Therapy"},
+  {"Id": 7, "WeekDay": 2, "DisplayOrder": 2, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "09:45", "EndTime": "10:30", "Title": "Life Skills"},
+  {"Id": 8, "WeekDay": 2, "DisplayOrder": 3, "SlotType": 2, "SlotTypeName": "Break", "StartTime": "10:30", "EndTime": "10:45", "Title": null},
+  {"Id": 9, "WeekDay": 2, "DisplayOrder": 4, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "10:45", "EndTime": "11:30", "Title": "Speech Therapy"},
+  {"Id": 10, "WeekDay": 2, "DisplayOrder": 5, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "11:30", "EndTime": "12:15", "Title": "Art & Craft"},
+
+  {"Id": 11, "WeekDay": 3, "DisplayOrder": 1, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "09:00", "EndTime": "09:45", "Title": "Occupational Therapy"},
+  {"Id": 12, "WeekDay": 3, "DisplayOrder": 2, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "09:45", "EndTime": "10:30", "Title": "Sports & Movement"},
+  {"Id": 13, "WeekDay": 3, "DisplayOrder": 3, "SlotType": 2, "SlotTypeName": "Break", "StartTime": "10:30", "EndTime": "10:45", "Title": null},
+  {"Id": 14, "WeekDay": 3, "DisplayOrder": 4, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "10:45", "EndTime": "11:30", "Title": "Life Skills"},
+  {"Id": 15, "WeekDay": 3, "DisplayOrder": 5, "SlotType": 3, "SlotTypeName": "Empty", "StartTime": "11:30", "EndTime": "12:15", "Title": null},
+
+  {"Id": 16, "WeekDay": 4, "DisplayOrder": 1, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "09:00", "EndTime": "09:45", "Title": "Speech Therapy"},
+  {"Id": 17, "WeekDay": 4, "DisplayOrder": 2, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "09:45", "EndTime": "10:30", "Title": "Sensory Play"},
+  {"Id": 18, "WeekDay": 4, "DisplayOrder": 3, "SlotType": 2, "SlotTypeName": "Break", "StartTime": "10:30", "EndTime": "10:45", "Title": null},
+  {"Id": 19, "WeekDay": 4, "DisplayOrder": 4, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "10:45", "EndTime": "11:30", "Title": "Music Therapy"},
+  {"Id": 20, "WeekDay": 4, "DisplayOrder": 5, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "11:30", "EndTime": "12:15", "Title": "Occupational Therapy"},
+
+  {"Id": 21, "WeekDay": 5, "DisplayOrder": 1, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "09:00", "EndTime": "09:45", "Title": "Life Skills"},
+  {"Id": 22, "WeekDay": 5, "DisplayOrder": 2, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "09:45", "EndTime": "10:30", "Title": "Art & Craft"},
+  {"Id": 23, "WeekDay": 5, "DisplayOrder": 3, "SlotType": 2, "SlotTypeName": "Break", "StartTime": "10:30", "EndTime": "10:45", "Title": null},
+  {"Id": 24, "WeekDay": 5, "DisplayOrder": 4, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "10:45", "EndTime": "11:30", "Title": "Sports & Movement"},
+  {"Id": 25, "WeekDay": 5, "DisplayOrder": 5, "SlotType": 1, "SlotTypeName": "Lesson", "StartTime": "11:30", "EndTime": "12:15", "Title": "Speech Therapy"}
+]

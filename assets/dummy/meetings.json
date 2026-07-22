@@ -1,0 +1,46 @@
+[
+  {
+    "Id": 1,
+    "MeetingType": 2,
+    "MeetingTypeName": "Parent",
+    "Title": "Term Progress Review - Anoop",
+    "Description": "Discuss Anoop's progress across therapy sessions this term and agree on next steps.",
+    "StartDateTime": "2026-07-18T10:00:00",
+    "EndDateTime": "2026-07-18T10:30:00",
+    "MeetLink": "https://meet.google.com/dummy-abc-defg",
+    "AudienceSummary": "Anoop's parent, Class Teacher"
+  },
+  {
+    "Id": 2,
+    "MeetingType": 3,
+    "MeetingTypeName": "Staff",
+    "Title": "Weekly Staff Sync",
+    "Description": "Weekly planning and case notes review for the KG and Class 1 teams.",
+    "StartDateTime": "2026-07-14T09:00:00",
+    "EndDateTime": "2026-07-14T09:45:00",
+    "MeetLink": "https://meet.google.com/dummy-hij-klmn",
+    "AudienceSummary": "All Staff"
+  },
+  {
+    "Id": 3,
+    "MeetingType": 2,
+    "MeetingTypeName": "Parent",
+    "Title": "IEP Planning Meeting",
+    "Description": "Annual individualized education plan discussion for the upcoming school cycle.",
+    "StartDateTime": "2026-07-22T13:00:00",
+    "EndDateTime": "2026-07-22T14:00:00",
+    "MeetLink": null,
+    "AudienceSummary": "Amritha's parent, Therapy Team"
+  },
+  {
+    "Id": 4,
+    "MeetingType": 1,
+    "MeetingTypeName": "Student",
+    "Title": "Sports Day Rehearsal Briefing",
+    "Description": "Briefing session ahead of the school's annual sports day rehearsal.",
+    "StartDateTime": "2026-07-10T11:00:00",
+    "EndDateTime": "2026-07-10T11:20:00",
+    "MeetLink": null,
+    "AudienceSummary": "Class 1 Students"
+  }
+]

@@ -1,15 +1,16 @@
 /// Mirrors the fields the backend actually returns from
 /// `Student/GetStudentById` (`Result.Student` + `Result.Parent`) - see
 /// `InkersCore.Models.RequestModels.StudentDetailRequest` /
-/// `ParentDetailRequest`. Grade/class aren't included here because that
-/// endpoint only returns their raw ids, not the human-readable master-data
-/// labels `Student/GetStudentList` provides.
+/// `ParentDetailRequest`. Only `gradeId` (a raw id) is carried from
+/// grade/class - the human-readable label isn't in this endpoint's
+/// response, only `Student/GetStudentList`'s.
 class Student {
   final String id;
   final String name;
   final String? studentCode;
   final String? qatarId;
   final DateTime? dateOfBirth;
+  final String? gradeId;
   final String? fatherName;
   final String? motherName;
   final String? parentMobileNumber;
@@ -21,6 +22,7 @@ class Student {
     this.studentCode,
     this.qatarId,
     this.dateOfBirth,
+    this.gradeId,
     this.fatherName,
     this.motherName,
     this.parentMobileNumber,
@@ -42,6 +44,7 @@ class Student {
       studentCode: student?['StudentCode'] as String?,
       qatarId: student?['QatarId'] as String?,
       dateOfBirth: dob != null ? DateTime.tryParse(dob) : null,
+      gradeId: student?['GradeId']?.toString(),
       fatherName: parent?['FatherName'] as String?,
       motherName: parent?['MotherName'] as String?,
       parentMobileNumber: parent?['MobileNumber'] as String?,

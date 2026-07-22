@@ -1,0 +1,7 @@
+[
+  {"Id": 1, "SenderUserType": 2, "SenderName": "Mubarak (Parent)", "Message": "Hi, could you let me know how Anoop did in today's speech therapy session?", "SentTime": "2026-07-13T09:02:00"},
+  {"Id": 2, "SenderUserType": 1, "SenderName": "Front Desk", "Message": "Good morning! Anoop did really well today - he named 4 out of 5 flashcards unprompted.", "SentTime": "2026-07-13T09:15:00"},
+  {"Id": 3, "SenderUserType": 2, "SenderName": "Mubarak (Parent)", "Message": "That's wonderful to hear, thank you!", "SentTime": "2026-07-13T09:16:00"},
+  {"Id": 4, "SenderUserType": 1, "SenderName": "Front Desk", "Message": "Also, a reminder that the term progress review meeting is scheduled for the 18th.", "SentTime": "2026-07-13T09:17:00"},
+  {"Id": 5, "SenderUserType": 2, "SenderName": "Mubarak (Parent)", "Message": "Got it, we'll be there.", "SentTime": "2026-07-13T09:20:00"}
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "Id": 1,
+    "Title": "Improve Verbal Communication",
+    "CategoryName": "Speech & Language",
+    "Description": "Build confidence forming short sentences during daily activities.",
+    "StartDate": "2026-05-01T00:00:00",
+    "EndDate": "2026-07-31T00:00:00",
+    "Status": 1,
+    "StatusName": "Pending",
+    "Remarks": "Making steady progress with prompted sentences.",
+    "ChecklistItems": [
+      {"Title": "Use 3-word sentences with prompting", "Objective": "Practice during morning circle time", "Status": 2, "StatusName": "Completed"},
+      {"Title": "Name 5 common objects unprompted", "Objective": "Use flashcards during speech sessions", "Status": 1, "StatusName": "Pending"},
+      {"Title": "Answer simple yes/no questions", "Objective": "Practice during snack time conversations", "Status": 1, "StatusName": "Pending"}
+    ]
+  },
+  {
+    "Id": 2,
+    "Title": "Build Fine Motor Skills",
+    "CategoryName": "Occupational Therapy",
+    "Description": "Strengthen hand-eye coordination through structured play.",
+    "StartDate": "2026-04-01T00:00:00",
+    "EndDate": "2026-06-30T00:00:00",
+    "Status": 2,
+    "StatusName": "Completed",
+    "Remarks": "Goal achieved - moving on to advanced pincer grip activities next cycle.",
+    "ChecklistItems": [
+      {"Title": "Stack 5 blocks independently", "Objective": "Daily block-play session", "Status": 2, "StatusName": "Completed"},
+      {"Title": "String large beads onto a lace", "Objective": "Fine motor station activity", "Status": 2, "StatusName": "Completed"}
+    ]
+  },
+  {
+    "Id": 3,
+    "Title": "Increase Social Interaction",
+    "CategoryName": "Life Skills",
+    "Description": "Encourage turn-taking and group participation.",
+    "StartDate": "2026-06-01T00:00:00",
+    "EndDate": "2026-08-15T00:00:00",
+    "Status": 3,
+    "StatusName": "On Hold",
+    "Remarks": "Paused during term break, resuming next month.",
+    "ChecklistItems": [
+      {"Title": "Take turns in a 2-player game", "Objective": "Practice with a peer during free play", "Status": 3, "StatusName": "On Hold"},
+      {"Title": "Greet classmates by name", "Objective": "Reinforce during arrival time", "Status": 1, "StatusName": "Pending"}
+    ]
+  }
+]
